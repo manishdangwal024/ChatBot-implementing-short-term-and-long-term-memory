@@ -9,6 +9,10 @@ const messageSchema= new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"chat"
     },
+    content:{
+        type:String,
+        required:true
+    },
     role:{
         type:String,
         enum:["user","model","system"], // inme se ek value set hogi
